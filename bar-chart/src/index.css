@@ -1,0 +1,23 @@
+body {
+  background-color: #333;
+}
+
+.container .title {
+  fill: rgb(253, 251, 251);
+  font-size: 2em;
+  font-weight: 400;
+}
+
+.bar-group .name-label {
+  text-anchor: end;
+  font-weight: 300;
+  font-size: 1em;
+  fill: rgb(248, 247, 247);
+}
+
+.bar-group .value-label {
+  text-anchor: end;
+  fill: rgb(2, 0, 0);
+  font-weight: 900;
+  font-size: 0.7em;
+}
