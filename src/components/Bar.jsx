@@ -13,21 +13,21 @@ export class BarChart extends React.Component {
   };
 
   render() {
-    let barHeight = 40;
+    let barWidth = 50;
 
-    let barGroups = this.state.data.map((d, i) => (
-      <g transform={`translate(0, ${i * barHeight})`}>
-        <BarGroup d={d} barHeight={barHeight} />
+    let barGroups = this.state.data.map((data, index) => (
+      <g transform={`translate(${barWidth * index}, 50)`}>
+        <BarGroup d={data} barWidth={barWidth} />
       </g>
     ));
 
     return (
-      <svg width="1000" height="300">
+      <svg width="900" height="1000">
         <g className="container">
           <text className="title" x="40" y="30">
             Price of Fruits/KG
           </text>
-          <g className="chart" transform="translate(100,60)">
+          <g className="chart" transform="translate(100,100)">
             {barGroups}
           </g>
         </g>

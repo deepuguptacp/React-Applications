@@ -2,28 +2,28 @@ import React from "react";
 import { BarChart } from "./Bar";
 
 export function BarGroup(props) {
-  let barPadding = 2;
+  let barPadding = 3;
   let barColour = props.d.color;
-  let widthScale = (d) => d * 10;
+  let heightScale = (d) => d * 5;
 
-  let width = widthScale(props.d.value);
-  let yMid = props.barHeight * 0.5;
+  let height = heightScale(props.d.value);
+  let xMid = props.barWidth * 0.5;
 
   return (
     <g className="bar-group">
-      <text className="name-label" x="-6" y={yMid} alignmentBaseline="middle">
+      <text className="name-label" y="-6" x={xMid} alignmentBaseline="bottom">
         {props.d.name}
       </text>
       <rect
-        y={barPadding}
-        width={width}
-        height={props.barHeight - barPadding}
+        x={barPadding}
+        height={height}
+        width={props.barWidth - barPadding}
         fill={barColour}
       />
       <text
         className="value-label"
-        x={width - 10}
-        y={yMid}
+        y={height - 10}
+        x={xMid + 5}
         alignmentBaseline="middle"
       >
         {props.d.value}
