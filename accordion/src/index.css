@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: rgb(75, 75, 69);
+}
+.App {
+  justify-content: center;
+  margin-left: 480px;
+  margin-top: 250px;
+}

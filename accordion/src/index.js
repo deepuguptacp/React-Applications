@@ -1,12 +1,25 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import Accordion from "./components/Accordion";
+import "./index.css";
 
-import App from "./App";
-// import reportWebVitals from "./reportWebVitals";
+function App() {
+  return (
+    <div className="App">
+      <Accordion
+        title="Personal Information"
+        content="Hey! I am abc from def, i have been working with ghi since 20XX."
+      />
+      <Accordion
+        title="Permanent Address"
+        content="I belong to jkl city, pincode:- ******"
+      />
+      <Accordion
+        title="Temporary Address"
+        content="Temperorarily i belong to mno, pincode:- ######"
+      />
+    </div>
+  );
+}
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById("root")
-);
+ReactDOM.render(<App />, document.getElementById("root"));
