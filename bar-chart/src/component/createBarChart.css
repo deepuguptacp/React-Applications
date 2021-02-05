@@ -9,10 +9,10 @@ body {
   margin-left: 10px;
   margin-bottom: 10px;
 }
-#h1 {
-  align-self: center;
-  font-weight: 300;
-  color: rgb(6, 6, 7);
+h1 {
+  width: 500px;
+  margin: 0 auto;
+  background: gray;
   text-align: center;
 }
 .chart {
