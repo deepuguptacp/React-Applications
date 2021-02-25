@@ -24,13 +24,11 @@ class Counter extends Component {
         >
           Delete
         </button>
-        {/* <ul>{this.state.tags.map(tag => <li key = {tag}>{tag}</li>)}</ul> */}
       </div>
     );
   }
   getBadgeClasses() {
     let classes = "badge m-3 badge-";
-    // classes += (this.state.value === 0) ? "warning" : "primary";
     if (this.props.counter.value === 0) {
       classes += "warning";
     }
